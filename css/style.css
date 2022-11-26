@@ -8,7 +8,8 @@
 --btn-color: #2196F3;
 --second-text-color: #FFFFFF; 
 --second-bg-color: #F5F4FA; 
---border-color: #EEEEEE; 
+--border-color: #EEEEEE;
+--second-brdr-color: #AFB1B8; 
 --second-border-color: #ECECEC;
 --footer-color: #2F303A;
 --second-btn-color: #188CE8;
@@ -240,7 +241,7 @@ justify-content: center;
 align-items: center;
 width: 270px;
 height: 120px;
-background-color: #F5F4FA;
+background-color: var(--second-bg-color);
 margin-bottom: 30px;
 border-radius: 4px;
 }
@@ -320,7 +321,7 @@ border-radius: 50%;
 background-color:var(--bg-color);
 justify-content: center;
 align-items: center;
-color: #AFB1B8;
+color: var(--second-brdr-color);
 }
 .team-soc-link:hover {
 color: var(--second-text-color);
@@ -352,8 +353,8 @@ height: 100%;
 display: flex; 
 justify-content: center;
 align-items: center;  
-fill: #AFB1B8;
-border: 1px solid #AFB1B8;
+fill: var(--second-brdr-color);
+border: 1px solid var(--second-brdr-color);
 border-radius: 4px; 
 background-color: var(--bg-color);
 }
@@ -366,10 +367,12 @@ border-color: var(--accent-color);
 }
 
 /*---FOOTER---*/
-.footer .container {
-display: flex; 
-display: block;
-align-items: baseline;
+.footer-container {
+display: flex;  
+align-items: baseline;  
+}
+.footer .logo-container {
+display: inline-block
 }
 .footer {
 background-color: var(--footer-color); 
@@ -398,18 +401,22 @@ color: rgba(255, 255, 255, 0.6);
 .footer-links:focus {
 color: var(--accent-color);    
 }
-
+.soc-container {
+display: inline-block;
+margin-left: 70px;
+}
 .title {
+font-size: 14px;
+text-transform: uppercase;    
 color: var(--second-text-color); 
-margin-bottom: 20px;   
+margin-bottom: 20px; 
+text-align: left;
 }
 .social-list {
 display: flex; 
-max-width: 206px;  
-height: 80px; 
-padding: 0;
 justify-content: center;
 align-items: center;
+min-width: 206px;  
 }
 .social-link {
 width: 44px;   
@@ -496,6 +503,9 @@ margin-right: 0px;
 }
 .port-item:nth-last-child(-n+3) {
 margin-bottom: 0px;    
+}
+.tehrk {
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16)
 }
 .port-blok {
 padding: 20px 24px;
